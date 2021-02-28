@@ -4,11 +4,15 @@
 index.html : 裡面有寫用了哪些東西
 
 styles.css : 首頁的和元件Commodity的CSS
+
 item.css : 商品的詳細頁面(為網頁中點進去的子網頁)的CSS
 
 script.js : 首頁的JS和元件Commodity
+
 shoppingcartwrapper.js : 的程式碼功能，主要是首頁和商品頁面裡的左側隱藏起來的購物欄
+
 saleContents.js : 商品的陣列(目錄)
+
 detail.js : 商品的詳細頁面(為網頁中點進去的子網頁)
 
 ----------------------------------------------
