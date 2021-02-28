@@ -1,0 +1,243 @@
+#detail {
+  background-color: #60686c;
+  color: #e8e6e3;
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+}
+#detail .content {
+  background-color: #484e51;
+  width: 1000px;
+  height: 650px;
+  margin: auto;
+  display: flex;
+}
+#detail .content .pictureWrapper {
+  width: 600px;
+  height: 600px;
+  margin: 32px 0 18px 0;
+  position: relative;
+  text-align: center;
+}
+#detail .content .pictureWrapper .bigPicture {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+#detail .content .detail {
+  background-color: gray;
+  width: 400px;
+  height: 600px;
+  margin: 32px 32px 18px;
+  text-align: left;
+}
+#detail .content .detail .price {
+  margin: 16px 0 40px;
+}
+#detail .content .detail select {
+  background-color: #181a1b;
+  color: #e8e6e3;
+  width: 400px;
+  height: 50px;
+  border: 0;
+}
+#detail .content .soldOut {
+  color: red;
+  width: 400px;
+  height: 50px;
+  font-size: 26px;
+}
+#detail .content .description {
+  height: 160px;
+}
+#detail .content .description h2 {
+  margin: 16px 0;
+}
+#detail .content .description2 {
+  height: 160px;
+}
+#detail .content .description2 ul {
+  margin: 18px;
+}
+#detail .content button {
+  background-color: #181a1b;
+  color: #e8e6e3;
+  padding: 8px 44px;
+  border: 2px solid #8c8273;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+}
+body {
+  background-color: #000;
+  font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+  position: relative;
+}
+#fixed-topBar {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+}
+#fixed-topBar button {
+  border: 1px solid gray;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+.shoppingCartWrapper {
+  background-color: black;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 375px;
+  overflow: auto;
+}
+.shoppingCartWrapper .shoppingCart {
+  background-color: #ccc;
+  height: 50px;
+  line-height: 50px;
+  font-size: 22px;
+}
+.shoppingCartWrapper .shoppingCartIntroduction {
+  background-color: #ddd;
+  display: flex;
+}
+.shoppingCartWrapper ul {
+  list-style: none;
+}
+.shoppingCartWrapper ul li {
+  display: flex;
+  height: 120px;
+  line-height: 120px;
+  border-bottom: 1px solid #fff;
+}
+.shoppingCartWrapper ul li img {
+  height: 100px;
+  max-width: 100px;
+}
+.shoppingCartWrapper .shopinggCartImg {
+  width: 100px;
+  border-right: 1px #fff solid;
+}
+.shoppingCartWrapper .shopinggCartTitle {
+  width: 75px;
+  border-right: 1px #fff solid;
+}
+.shoppingCartWrapper .shopinggCartTitle .inlineBlock {
+  width: 75px;
+}
+.shoppingCartWrapper .shopinggCartPrice {
+  width: 65px;
+  border-right: 1px #fff solid;
+}
+.shoppingCartWrapper .shopinggCartPrice .inlineBlock {
+  width: 65px;
+}
+.shoppingCartWrapper .shopinggCartNum {
+  width: 45px;
+  border-right: 1px #fff solid;
+}
+.shoppingCartWrapper .shopinggCartNum .inlineBlock {
+  width: 45px;
+}
+.shoppingCartWrapper .shopinggCartDelete {
+  width: 45px;
+}
+.shoppingCartWrapper .shopinggCartDelete .inlineBlock {
+  width: 45px;
+  cursor: pointer;
+  padding: 5px;
+}
+.shoppingCartWrapper .shopinggCartDelete .inlineBlock:hover {
+  color: red;
+}
+.shoppingCartWrapper .inlineBlock {
+  background: #ccc;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  margin: auto;
+  cursor: default;
+}
+.shoppingCartWrapper .shopinggCartTotlePrice {
+  height: 50px;
+  text-align: center;
+}
+.shoppingCartWrapper .shopinggCartTotlePrice div {
+  height: 50px;
+  line-height: 50px;
+  border: none;
+  margin: auto;
+}
+.coverAll {
+  background-color: gray;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+}
+.componentCoverAll {
+  background-color: gray;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.move-enter-active,
+.move-leave-active {
+  transition: all 0.3s;
+}
+.move-enter,
+.move-leave-to {
+  transform: translateX(-375px);
+}
+.imgGroup {
+  width: 1000px;
+  height: 218px;
+  display: flex;
+  overflow: auto;
+  margin: 0 auto;
+}
+.imgGroup img {
+  height: 200px;
+}
+.previousPage {
+  position: fixed;
+  background-color: #181a1b;
+  color: #e8e6e3;
+  width: 100px;
+  height: 100px;
+  top: 50px;
+  right: 0;
+  text-decoration: none;
+  line-height: 100px;
+  font-size: 20px;
+}
+.previousPage:hover {
+  color: red;
+}
+/*# sourceMappingURL=./item.css.map */

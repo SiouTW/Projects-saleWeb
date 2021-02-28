@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+// 商品div長寬高
+@commodity-height: 330px;
+@commodity-width: 270px;
+@commodity-margin: 15px;
+// 左側隱藏的購物車欄位
+@side-bar-shoppingcart-width: 375px;
+// 左側欄位
+@side-bar-img-width: 310px;
+@side-bar-img-height: 310px;
+
+// 基本設定
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+}
+
+// 防止使用者看到vue的變量名
+[v-cloak] {
+  display: none;
+}
+
+body {
+  background-color: #000;
+  // color: #fff;
+  font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+  position: relative;
+}
+
+// 讓輸入框的+-鍵消失
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+// 讓輸入框的+-鍵消失
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+// 覆蓋全頁面的灰色
+.coverAll {
+  background-color: gray;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: .5;
+}
+
+// 案購物車之類時的灰色遮蔽物
+.componentCoverAll {
+  background-color: gray;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: .5;
+}
+
+// 點選加入購物車後跳出的框
+.smallSellBoxWrapper {
+  // background-color: #000;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  max-height: auto;
+  min-width: auto;
+
+  // 放大的圖片
+  .topOfPicture {
+    position: relative;
+    z-index: 30;
+  }
+
+  // 購物框
+  .smallSellBox {
+    background-color: #000;
+    position: fixed;
+    height: 600px;
+    width: 600px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 20;
+    border-radius: 5px;
+
+    .relative {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      padding: 15px;
+
+
+      .flex {
+        display: flex;
+
+        .left {
+          background-color: gray;
+          width: 285px;
+          height: 570px;
+          position: relative;
+
+          img {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+        }
+
+        .right {
+          background-color: rgb(38, 42, 43);
+          width: 255px;
+          height: 540px;
+          margin: 15px;
+
+          h3 {
+            font-size: 20px;
+            margin: 15px 0 0 0;
+            text-align: left;
+          }
+
+          h4 {
+            margin: 15px 0 0 0;
+            text-align: left;
+          }
+
+          .CommodityDescription {
+            height: 180px;
+            width: 255px;
+
+            p {
+              margin: 10px 0 0 0;
+              text-align: left;
+            }
+          }
+
+          .inputGroup {
+            // 讓button和input邊距為0
+            font-size: 0;
+
+            h4 {
+              font-size: 18px;
+              margin: 5px 0;
+            }
+
+            button {
+              background-color: #000;
+              color: #fff;
+              height: 30px;
+              width: 30px;
+              border-radius: 5px 0 0 5px;
+              font-size: 16px;
+              border: 1px solid transparent;
+              // 讓button和input高度相同
+              vertical-align: middle;
+
+              &:last-child {
+                border-radius: 0 5px 5px 0;
+              }
+            }
+
+            input {
+              background-color: rgb(24, 26, 27);
+              color: rgb(178, 171, 161);
+              height: 30px;
+              width: 195px;
+              border: 1px solid #ccc;
+              // 讓button和input高度相同
+              vertical-align: middle;
+            }
+          }
+
+          .confirmAdd {
+            background-color: rgba(51, 51, 51, 0.95);
+            color: #fff;
+            border: 1px solid rgb(129, 120, 106);
+            width: 255px;
+            height: 40px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 20px;
+          }
+
+          h5 {
+            color: red;
+            font-size: 18px;
+          }
+
+          .imgControl {
+            position: relative;
+            width: 255px;
+            height: 118px;
+
+            .a {
+              background-color: rgba(0, 0, 0, .6);
+              position: absolute;
+              left: 0;
+              // margin: auto 0;
+              width: 30px;
+              height: 100px;
+              line-height: 100px;
+            }
+
+            .ab {
+              background-color: rgba(0, 0, 0, .6);
+              position: absolute;
+              top: 0;
+              right: 0;
+              // margin: auto 0;
+              width: 30px;
+              height: 100px;
+              line-height: 100px;
+            }
+
+            .imgGroup {
+              width: 255px;
+              height: 118px;
+              display: flex;
+              overflow: auto;
+              // display: inline-block;
+
+              img {
+                height: 100px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+  }
+}
+
+// 售完
+.outOfStock {
+  opacity: .5;
+}
+
+// 左側隱藏的購物欄
+.shoppingCartWrapper {
+  background-color: black;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 375px;
+  overflow: auto;
+
+  .shoppingCart {
+    background-color: #ccc;
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+  }
+
+  .shoppingCartIntroduction {
+    background-color: #ddd;
+    display: flex;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: flex;
+      height: 120px;
+      line-height: 120px;
+      border-bottom: 1px solid #fff;
+
+      img {
+        height: 100px;
+        max-width: 100px;
+      }
+    }
+  }
+
+  .shopinggCartImg {
+    width: 100px;
+    border-right: 1px #fff solid;
+  }
+
+  .shopinggCartTitle {
+    width: 75px;
+    border-right: 1px #fff solid;
+
+    .inlineBlock {
+      width: 75px;
+    }
+  }
+
+  .shopinggCartPrice {
+    width: 65px;
+    border-right: 1px #fff solid;
+
+    .inlineBlock {
+      width: 65px;
+    }
+  }
+
+  .shopinggCartNum {
+    width: 45px;
+    border-right: 1px #fff solid;
+
+    .inlineBlock {
+      width: 45px;
+    }
+  }
+
+  .shopinggCartDelete {
+    width: 45px;
+
+
+    .inlineBlock {
+      width: 45px;
+      cursor: pointer;
+      padding: 5px;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  .inlineBlock {
+    background: #ccc;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    margin: auto;
+    cursor: default;
+  }
+
+  .shopinggCartTotlePrice {
+    height: 50px;
+    text-align: center;
+
+    div {
+      height: 50px;
+      line-height: 50px;
+      border: none;
+      margin: auto;
+    }
+  }
+}
+
+
+// 左側的商品介紹欄
+#sideBar {
+  background-color: rgb(96, 104, 108);
+  position: fixed;
+  // z-index: -1;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: @side-bar-img-width;
+
+  &:hover {
+    z-index: 10;
+  }
+
+  .bar1 {
+    height: @side-bar-img-height;
+    background-color: #FFF3BF;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .bar2 {
+    ul {
+      list-style: none;
+
+      .thisMonth {
+        li {
+          width: 180px;
+        }
+
+        &:hover .goods {
+          display: block;
+        }
+      }
+
+      li {
+        color: #fff;
+        display: block;
+        padding: 10px 20px;
+
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: #e8e6e3;
+        }
+
+        &:hover {
+          background-color: #000;
+        }
+
+        .goods {
+          background-color: red;
+          position: fixed;
+          top: 355px;
+          left: @side-bar-img-width ;
+          display: none;
+        }
+
+        .countNum {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+// 畫面中的販售商品
+#saleContent {
+  // background-color: #333;
+  background-color: rgb(38, 42, 43);
+  color: #e8e6e3;
+  position: fixed;
+  top: 50px;
+  // left: 277px;
+  left: 310px;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  overflow-y: scroll;
+
+  .title {
+    font-size: 2rem;
+    margin: 0 0 10px 0;
+  }
+
+  .commodity-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-around;
+
+    .commodity {
+      background-color: crimson;
+      ;
+      height: @commodity-height;
+      width: @commodity-width;
+      margin: 20px @commodity-margin;
+
+      &:hover .add-to-cart {
+        display: block !important;
+      }
+
+      a {
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+
+        .image-wrapper {
+          position: relative;
+
+          .image {
+            height: 240px;
+            width: 240px;
+            margin: 0 @commodity-margin;
+            background-image: url(./picture/0.png);
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+
+          .add-to-cart {
+            background-color: black;
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            opacity: .85;
+            height: 50px;
+            line-height: 50px;
+            font-size: 24px;
+            width: 270px;
+            display: none;
+          }
+
+          .sold-out {
+            background-color: black;
+            opacity: .8;
+            color: #fff;
+            position: absolute;
+            font-size: 1.2rem;
+            bottom: 0;
+            right: 0;
+            padding: 1px 3px;
+            border-radius: 5px;
+            // display: none;
+          }
+        }
+
+        .info-box {
+          color: rgb(200, 195, 188);
+          margin: 10px 15px;
+
+          .info-box-name {
+            height: 20px;
+            width: 240px;
+            margin: 10px 0;
+          }
+
+          .info-box-price {
+            height: 20px;
+            width: 240px;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 會員登入 購物車 相關的資料
+#fixed-topBar {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+
+  button {
+    background-color: #181a1b;
+    color: #e8e6e3;
+    border: 1px solid gray;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    z-index: 10;
+  }
+}
+
+// 動畫
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.move-enter-active,
+.move-leave-active {
+  transition: all .3s;
+}
+
+.move-enter,
+.move-leave-to {
+  transform: translateX(-@side-bar-shoppingcart-width);
+}
+
+.userNeedToKonw {
+  margin: auto;
+}

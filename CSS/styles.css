@@ -1,0 +1,482 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLFj_V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+}
+[v-cloak] {
+  display: none;
+}
+body {
+  background-color: #000;
+  font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+  position: relative;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.coverAll {
+  background-color: gray;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+}
+.componentCoverAll {
+  background-color: gray;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+}
+.smallSellBoxWrapper {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  max-height: auto;
+  min-width: auto;
+}
+.smallSellBoxWrapper .topOfPicture {
+  position: relative;
+  z-index: 30;
+}
+.smallSellBoxWrapper .smallSellBox {
+  background-color: #000;
+  position: fixed;
+  height: 600px;
+  width: 600px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+  border-radius: 5px;
+}
+.smallSellBoxWrapper .smallSellBox .relative {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex {
+  display: flex;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .left {
+  background-color: gray;
+  width: 285px;
+  height: 570px;
+  position: relative;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .left img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right {
+  background-color: #262a2b;
+  width: 255px;
+  height: 540px;
+  margin: 15px;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right h3 {
+  font-size: 20px;
+  margin: 15px 0 0 0;
+  text-align: left;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right h4 {
+  margin: 15px 0 0 0;
+  text-align: left;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right .CommodityDescription {
+  height: 180px;
+  width: 255px;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right .CommodityDescription p {
+  margin: 10px 0 0 0;
+  text-align: left;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right .inputGroup {
+  font-size: 0;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right .inputGroup h4 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right .inputGroup button {
+  background-color: #000;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  border: 1px solid transparent;
+  vertical-align: middle;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right .inputGroup button:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right .inputGroup input {
+  background-color: #181a1b;
+  color: #b2aba1;
+  height: 30px;
+  width: 195px;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right .confirmAdd {
+  background-color: rgba(51, 51, 51, 0.95);
+  color: #fff;
+  border: 1px solid #81786a;
+  width: 255px;
+  height: 40px;
+  margin: 15px 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right h5 {
+  color: red;
+  font-size: 18px;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right .imgControl {
+  position: relative;
+  width: 255px;
+  height: 118px;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right .imgControl .a {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 100px;
+  line-height: 100px;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right .imgControl .ab {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 100px;
+  line-height: 100px;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right .imgControl .imgGroup {
+  width: 255px;
+  height: 118px;
+  display: flex;
+  overflow: auto;
+}
+.smallSellBoxWrapper .smallSellBox .relative .flex .right .imgControl .imgGroup img {
+  height: 100px;
+}
+.smallSellBoxWrapper .close {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+.outOfStock {
+  opacity: 0.5;
+}
+.shoppingCartWrapper {
+  background-color: black;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 375px;
+  overflow: auto;
+}
+.shoppingCartWrapper .shoppingCart {
+  background-color: #ccc;
+  height: 50px;
+  line-height: 50px;
+  font-size: 22px;
+}
+.shoppingCartWrapper .shoppingCartIntroduction {
+  background-color: #ddd;
+  display: flex;
+}
+.shoppingCartWrapper ul {
+  list-style: none;
+}
+.shoppingCartWrapper ul li {
+  display: flex;
+  height: 120px;
+  line-height: 120px;
+  border-bottom: 1px solid #fff;
+}
+.shoppingCartWrapper ul li img {
+  height: 100px;
+  max-width: 100px;
+}
+.shoppingCartWrapper .shopinggCartImg {
+  width: 100px;
+  border-right: 1px #fff solid;
+}
+.shoppingCartWrapper .shopinggCartTitle {
+  width: 75px;
+  border-right: 1px #fff solid;
+}
+.shoppingCartWrapper .shopinggCartTitle .inlineBlock {
+  width: 75px;
+}
+.shoppingCartWrapper .shopinggCartPrice {
+  width: 65px;
+  border-right: 1px #fff solid;
+}
+.shoppingCartWrapper .shopinggCartPrice .inlineBlock {
+  width: 65px;
+}
+.shoppingCartWrapper .shopinggCartNum {
+  width: 45px;
+  border-right: 1px #fff solid;
+}
+.shoppingCartWrapper .shopinggCartNum .inlineBlock {
+  width: 45px;
+}
+.shoppingCartWrapper .shopinggCartDelete {
+  width: 45px;
+}
+.shoppingCartWrapper .shopinggCartDelete .inlineBlock {
+  width: 45px;
+  cursor: pointer;
+  padding: 5px;
+}
+.shoppingCartWrapper .shopinggCartDelete .inlineBlock:hover {
+  color: red;
+}
+.shoppingCartWrapper .inlineBlock {
+  background: #ccc;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  margin: auto;
+  cursor: default;
+}
+.shoppingCartWrapper .shopinggCartTotlePrice {
+  height: 50px;
+  text-align: center;
+}
+.shoppingCartWrapper .shopinggCartTotlePrice div {
+  height: 50px;
+  line-height: 50px;
+  border: none;
+  margin: auto;
+}
+#sideBar {
+  background-color: #60686c;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 310px;
+}
+#sideBar:hover {
+  z-index: 10;
+}
+#sideBar .bar1 {
+  height: 310px;
+  background-color: #FFF3BF;
+}
+#sideBar .bar1 img {
+  width: 100%;
+}
+#sideBar .bar2 ul {
+  list-style: none;
+}
+#sideBar .bar2 ul .thisMonth li {
+  width: 180px;
+}
+#sideBar .bar2 ul .thisMonth:hover .goods {
+  display: block;
+}
+#sideBar .bar2 ul li {
+  color: #fff;
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+#sideBar .bar2 ul li a {
+  text-decoration: none;
+  color: #e8e6e3;
+}
+#sideBar .bar2 ul li:hover {
+  background-color: #000;
+}
+#sideBar .bar2 ul li .goods {
+  background-color: red;
+  position: fixed;
+  top: 355px;
+  left: 310px;
+  display: none;
+}
+#sideBar .bar2 ul li .countNum {
+  float: right;
+}
+#saleContent {
+  background-color: #262a2b;
+  color: #e8e6e3;
+  position: fixed;
+  top: 50px;
+  left: 310px;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  overflow-y: scroll;
+}
+#saleContent .title {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+}
+#saleContent .commodity-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+#saleContent .commodity-wrapper .commodity {
+  background-color: crimson;
+  height: 330px;
+  width: 270px;
+  margin: 20px 15px;
+}
+#saleContent .commodity-wrapper .commodity:hover .add-to-cart {
+  display: block !important;
+}
+#saleContent .commodity-wrapper .commodity a {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+#saleContent .commodity-wrapper .commodity a .image-wrapper {
+  position: relative;
+}
+#saleContent .commodity-wrapper .commodity a .image-wrapper .image {
+  height: 240px;
+  width: 240px;
+  margin: 0 15px;
+  background-image: url(picture/0.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#saleContent .commodity-wrapper .commodity a .image-wrapper .add-to-cart {
+  background-color: black;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  opacity: 0.85;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  width: 270px;
+  display: none;
+}
+#saleContent .commodity-wrapper .commodity a .image-wrapper .sold-out {
+  background-color: black;
+  opacity: 0.8;
+  color: #fff;
+  position: absolute;
+  font-size: 1.2rem;
+  bottom: 0;
+  right: 0;
+  padding: 1px 3px;
+  border-radius: 5px;
+}
+#saleContent .commodity-wrapper .commodity a .info-box {
+  color: #c8c3bc;
+  margin: 10px 15px;
+}
+#saleContent .commodity-wrapper .commodity a .info-box .info-box-name {
+  height: 20px;
+  width: 240px;
+  margin: 10px 0;
+}
+#saleContent .commodity-wrapper .commodity a .info-box .info-box-price {
+  height: 20px;
+  width: 240px;
+  margin: 10px 0;
+}
+#fixed-topBar {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+}
+#fixed-topBar button {
+  background-color: #181a1b;
+  color: #e8e6e3;
+  border: 1px solid gray;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.move-enter-active,
+.move-leave-active {
+  transition: all 0.3s;
+}
+.move-enter,
+.move-leave-to {
+  transform: translateX(-375px);
+}
+.userNeedToKonw {
+  margin: auto;
+}
+/*# sourceMappingURL=./styles.css.map */

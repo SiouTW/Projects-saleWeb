@@ -1,0 +1,305 @@
+#detail {
+  // background-color: gray;
+  background-color: rgb(96, 104, 108);
+  color: #e8e6e3;
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+
+  .content {
+    // background-color: #aaa;
+    background-color: rgb(72, 78, 81);
+    width: 1000px;
+    height: 650px;
+    margin: auto;
+    display: flex;
+
+    // 左側
+    .pictureWrapper {
+      width: 600px;
+      height: 600px;
+      margin: 32px 0 18px 0;
+      position: relative;
+      text-align: center;
+
+      .bigPicture {
+        max-height: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+    }
+
+    // 右側
+    .detail {
+      background-color: gray;
+      width: 400px;
+      height: 600px;
+      margin: 32px 32px 18px;
+      text-align: left;
+
+      .price {
+        margin: 16px 0 40px;
+      }
+
+      select {
+        background-color: rgb(24, 26, 27);
+        color: #e8e6e3;
+        width: 400px;
+        height: 50px;
+        border: 0;
+      }
+    }
+
+    .soldOut {
+      color: red;
+      width: 400px;
+      height: 50px;
+      font-size: 26px;
+    }
+
+    .description {
+      height: 160px;
+
+      h2 {
+        margin: 16px 0;
+      }
+    }
+
+    .description2 {
+      height: 160px;
+
+      ul {
+        margin: 18px;
+      }
+    }
+
+    button {
+      background-color: #181a1b;
+      color: #e8e6e3;
+      padding: 8px 44px;
+      border: 2px solid rgb(140, 130, 115);
+    }
+  }
+}
+
+// 基本設定
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // text-align: center;
+  font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+}
+
+body {
+  background-color: #000;
+  // color: #fff;
+  font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+  position: relative;
+}
+
+// 左側隱藏的購物車欄位
+@side-bar-shoppingcart-width: 375px;
+// 左側欄位
+@side-bar-img-width: 375px;
+
+// 會員登入 購物車 相關的資料
+#fixed-topBar {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+
+  button {
+    border: 1px solid gray;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    z-index: 10;
+  }
+}
+
+// 左側隱藏的購物欄
+.shoppingCartWrapper {
+  background-color: black;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 375px;
+  overflow: auto;
+
+  .shoppingCart {
+    background-color: #ccc;
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+  }
+
+  .shoppingCartIntroduction {
+    background-color: #ddd;
+    display: flex;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: flex;
+      height: 120px;
+      line-height: 120px;
+      border-bottom: 1px solid #fff;
+
+      img {
+        height: 100px;
+        max-width: 100px;
+      }
+    }
+  }
+
+  .shopinggCartImg {
+    width: 100px;
+    border-right: 1px #fff solid;
+  }
+
+  .shopinggCartTitle {
+    width: 75px;
+    border-right: 1px #fff solid;
+
+    .inlineBlock {
+      width: 75px;
+    }
+  }
+
+  .shopinggCartPrice {
+    width: 65px;
+    border-right: 1px #fff solid;
+
+    .inlineBlock {
+      width: 65px;
+    }
+  }
+
+  .shopinggCartNum {
+    width: 45px;
+    border-right: 1px #fff solid;
+
+    .inlineBlock {
+      width: 45px;
+    }
+  }
+
+  .shopinggCartDelete {
+    width: 45px;
+
+
+    .inlineBlock {
+      width: 45px;
+      cursor: pointer;
+      padding: 5px;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  .inlineBlock {
+    background: #ccc;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    margin: auto;
+    cursor: default;
+  }
+
+  .shopinggCartTotlePrice {
+    height: 50px;
+    text-align: center;
+
+    div {
+      height: 50px;
+      line-height: 50px;
+      border: none;
+      margin: auto;
+    }
+  }
+}
+
+// 覆蓋全頁面的灰色
+.coverAll {
+  background-color: gray;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: .5;
+}
+
+// 案購物車之類時的灰色遮蔽物
+.componentCoverAll {
+  background-color: gray;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: .5;
+}
+
+// 動畫
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.move-enter-active,
+.move-leave-active {
+  transition: all .3s;
+}
+
+.move-enter,
+.move-leave-to {
+  transform: translateX(-@side-bar-shoppingcart-width);
+}
+
+.imgGroup {
+  width: 1000px;
+  height: 218px;
+  display: flex;
+  overflow: auto;
+  margin: 0 auto;
+
+  img {
+    height: 200px;
+  }
+}
+
+.previousPage {
+  position: fixed;
+  background-color: rgb(24, 26, 27);
+  color: #e8e6e3;
+  width: 100px;
+  height: 100px;
+  top: 50px;
+  right: 0;
+  text-decoration: none;
+  line-height: 100px;
+  font-size: 20px;
+
+  &:hover {
+    color: red;
+  }
+}
